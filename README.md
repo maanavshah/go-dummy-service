@@ -1,4 +1,4 @@
-# go-gorm
+# go-dummy-service
 Basic CRUD server written in go using gorm
 
 ## Installation
