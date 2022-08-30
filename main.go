@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	Config.InitDb(true)
+	Config.InitDb()
 	app := gin.New()
 	app.Use(gin.Logger())
 	app.Use(gin.Recovery())
