@@ -2,12 +2,13 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/maanavshah/go-gorm/internal/db"
-	"github.com/maanavshah/go-gorm/router"
+	"github.com/maanavshah/go-gorm/internal/route"
+
+	Config "github.com/maanavshah/go-gorm/common/config"
 )
 
 func main() {
-	db.Init()
+	Config.InitDb(true)
 	app := gin.New()
 	app.Use(gin.Logger())
 	app.Use(gin.Recovery())
