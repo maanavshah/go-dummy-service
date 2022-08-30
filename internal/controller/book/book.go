@@ -10,11 +10,6 @@ import (
 	"github.com/maanavshah/go-gorm/internal/model/book"
 )
 
-func AddBookRoutes(router *gin.Engine) {
-	router.POST("/books", CreateBook)
-	router.GET("/books", ListAllBooks)
-}
-
 func CreateBook(ctx *gin.Context) {
 	var payload BookDTO.CreateBookRequestDTO
 	err := ctx.ShouldBindJSON(&payload)
