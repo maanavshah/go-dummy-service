@@ -5,6 +5,7 @@ Basic CRUD server written in go using gorm
 * Install and setup GO [go 1.18](https://go.dev/dl/)
 * Install and setup PostgreSQL
 * Install flyway (On Mac: `brew install flyway`)
+* Install air for live reloading go apps: `go install github.com/cosmtrek/air@latest`
 * Create database `go_crud` with user `maanav` (you can tweak if you want, check `db/db.go`)
 * `git clone git@github.com/maanavshah/go-gorm`
 * `cd go-gorm`

@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/maanavshah/go-gorm/internal/route"
+	router "github.com/maanavshah/go-gorm/internal/route"
 
 	Config "github.com/maanavshah/go-gorm/common/config"
 )
