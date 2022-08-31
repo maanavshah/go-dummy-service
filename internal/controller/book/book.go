@@ -1,13 +1,14 @@
 package controller
 
 import (
-	"github.com/gin-gonic/gin"
 	"net/http"
 
-	Config "github.com/maanavshah/go-dummy-service/common/config"
+	"github.com/gin-gonic/gin"
+
+	Database "github.com/maanavshah/go-dummy-service/common/database"
 	Network "github.com/maanavshah/go-dummy-service/common/network"
 	BookDTO "github.com/maanavshah/go-dummy-service/internal/dto/book"
-	"github.com/maanavshah/go-dummy-service/internal/model/book"
+	model "github.com/maanavshah/go-dummy-service/internal/model/book"
 )
 
 func CreateBook(ctx *gin.Context) {
@@ -18,13 +19,13 @@ func CreateBook(ctx *gin.Context) {
 		Network.ReturnJsonResponse(ctx, http.StatusBadRequest, err.Error())
 	} else {
 		book := model.Book{Title: payload.Title, Author: payload.Author, Desc: payload.Desc}
-		Config.DB.Create(&book)
+		Database.DB.Create(&book)
 		Network.ReturnJsonResponse(ctx, http.StatusOK, book)
 	}
 }
 
 func ListAllBooks(ctx *gin.Context) {
 	var books []model.Book
-	Config.DB.Find(&books)
+	Database.DB.Find(&books)
 	Network.ReturnJsonResponse(ctx, http.StatusOK, books)
 }
