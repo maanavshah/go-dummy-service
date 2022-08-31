@@ -1,9 +1,10 @@
 package health
 
 import (
+	"net/http"
+
 	"github.com/gin-gonic/gin"
 	Network "github.com/maanavshah/go-dummy-service/common/network"
-	"net/http"
 )
 
 func AddHealthRoutes(router *gin.Engine) {

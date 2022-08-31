@@ -1,17 +1,14 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	router "github.com/maanavshah/go-dummy-service/internal/route"
-
 	Config "github.com/maanavshah/go-dummy-service/common/config"
+	Router "github.com/maanavshah/go-dummy-service/internal/route"
 )
 
 func main() {
+	Config.SetupConfig()
 	Config.InitDb()
-	app := gin.New()
-	app.Use(gin.Logger())
-	app.Use(gin.Recovery())
-	router.SetupRouter(app)
-	app.Run("0.0.0.0:8000")
+	app := Config.SetupGinAppConfig()
+	Router.SetupRouter(app)
+	app.Run(Config.GetHostString())
 }
