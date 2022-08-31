@@ -4,10 +4,10 @@ import (
 	"github.com/gin-gonic/gin"
 	"net/http"
 
-	Config "github.com/maanavshah/go-gorm/common/config"
-	Network "github.com/maanavshah/go-gorm/common/network"
-	BookDTO "github.com/maanavshah/go-gorm/internal/dto/book"
-	"github.com/maanavshah/go-gorm/internal/model/book"
+	Config "github.com/maanavshah/go-dummy-service/common/config"
+	Network "github.com/maanavshah/go-dummy-service/common/network"
+	BookDTO "github.com/maanavshah/go-dummy-service/internal/dto/book"
+	"github.com/maanavshah/go-dummy-service/internal/model/book"
 )
 
 func CreateBook(ctx *gin.Context) {

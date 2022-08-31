@@ -1,4 +1,4 @@
-module github.com/maanavshah/go-gorm
+module github.com/maanavshah/go-dummy-service
 
 go 1.19
 

@@ -3,7 +3,7 @@ package controller
 import (
 	"github.com/gin-gonic/gin"
 
-	BookController "github.com/maanavshah/go-gorm/internal/controller/book"
+	BookController "github.com/maanavshah/go-dummy-service/internal/controller/book"
 )
 
 func AddBookRoutes(router *gin.Engine) {

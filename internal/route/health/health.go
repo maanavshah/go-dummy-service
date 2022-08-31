@@ -2,7 +2,7 @@ package health
 
 import (
 	"github.com/gin-gonic/gin"
-	Network "github.com/maanavshah/go-gorm/common/network"
+	Network "github.com/maanavshah/go-dummy-service/common/network"
 	"net/http"
 )
 

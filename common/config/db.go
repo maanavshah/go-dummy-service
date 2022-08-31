@@ -5,7 +5,7 @@ import (
 	"gorm.io/gorm"
 	"gorm.io/gorm/logger"
 	"log"
-	// "github.com/maanavshah/go-gorm/internal/model/book"
+	// "github.com/maanavshah/go-dummy-service/internal/model/book"
 )
 
 var DB *gorm.DB

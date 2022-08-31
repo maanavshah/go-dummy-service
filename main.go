@@ -2,9 +2,9 @@ package main
 
 import (
 	"github.com/gin-gonic/gin"
-	router "github.com/maanavshah/go-gorm/internal/route"
+	router "github.com/maanavshah/go-dummy-service/internal/route"
 
-	Config "github.com/maanavshah/go-gorm/common/config"
+	Config "github.com/maanavshah/go-dummy-service/common/config"
 )
 
 func main() {
