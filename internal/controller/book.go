@@ -1,14 +1,12 @@
 package controller
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
-
 	Database "github.com/maanavshah/go-dummy-service/common/database"
 	Network "github.com/maanavshah/go-dummy-service/common/network"
-	BookDTO "github.com/maanavshah/go-dummy-service/internal/dto/book"
-	model "github.com/maanavshah/go-dummy-service/internal/model/book"
+	BookDTO "github.com/maanavshah/go-dummy-service/internal/dto"
+	"github.com/maanavshah/go-dummy-service/internal/model"
+	"net/http"
 )
 
 func CreateBook(ctx *gin.Context) {

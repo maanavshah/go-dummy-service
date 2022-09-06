@@ -18,7 +18,6 @@ func SetupConfig() {
 
 func SetupGinAppConfig() *gin.Engine {
 	env := viper.GetString("env")
-	fmt.Println(env)
 	if env == "prod" {
 		gin.SetMode(gin.ReleaseMode)
 	}

@@ -1,4 +1,4 @@
-package book
+package dto
 
 type CreateBookRequestDTO struct {
 	Title  string `json:"title" binding:"required"`
